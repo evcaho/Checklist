@@ -40,19 +40,7 @@
       -->
 		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="dist/js/bootstrap.min.js"></script>
-		<script>$(document).ready(function(){
-           $('li img').on('click',function(){
-                var src = $(this).attr('src');
-                var img = '<img src="' + src + '" class="img-responsive"/>';
-                $('#myModal').modal();
-                $('#myModal').on('shown.bs.modal', function(){
-                    $('#myModal .modal-body').html(img);
-                });
-                $('#myModal').on('hidden.bs.modal', function(){
-                    $('#myModal .modal-body').html('');
-                });
-           });
-        })</script>
+	
 		<nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -76,25 +64,38 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-  
-       	 <form class="navbar-form" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Type task here" class="form-control" name="searchText">
-            </div>
-            <button type="submit" class="btn btn-primary search" name="searchButton">Task adder</button>
-          </form>
+  <div class="row">
+  <div class="col-md-4">
+
+       	
+  <h3>Add a task</h3>
+  <form id="todo-form">
+	  <p>
+		  
+	<input type="text" placeholder="Title" id="task-title" />  </p>
+	  <p><textarea placeholder="Description" id="task-description"></textarea></p>
+	<p>  <input type="text" placeholder="Due Date (dd/mm/yyyy)" id="task-date" /></p>
+    <input type="button" class="btn btn-primary" value="Add Task" id="add-button"/>
+  </form>
 		
-		<div class="btn-group btn-group-justified" role="group" aria-label="...">
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Add task</button>
+            <p id="taskadder">Click "task adder" button to generate a task</p>
+        
+	  </div>
+  <div class="col-md-4">
+	  <h3>
+		Task List  
+	  </h3>
+	  <ul id="task-list">
+		  
+	  </ul>
+	  </div>
+  <div class="col-md-4">
+	  <h3>
+		  Completed Tasks
+	  </h3>
   </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">New List</button>
-  </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Copy list to clipboard</button>
-  </div>
-</div>
+		</div>
+		
     
 </div>
 
