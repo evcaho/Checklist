@@ -48,7 +48,7 @@ ul {
 nav {
   height: 81px;
   width: 100%;
-  background-image: url("/images/task-master.png") !important;
+  background-image: url("https://github.com/evcaho/Checklist/raw/gh-pages/images/task-master.png") !important;
   background-position: top right;	
   background-color: #ff948b !important;
   font-size: 15pt;
