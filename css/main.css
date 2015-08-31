@@ -45,7 +45,16 @@ ul {
           margin-bottom:25px;
       }
     
-
+nav {
+  height: 81px;
+  width: 100%;
+  background-image: url("/images/task-master.png") !important;
+  background-position: top right;	
+  background-color: #ff948b !important;
+  font-size: 15pt;
+  position: relative;
+  background-repeat: no-repeat !important;	
+}
 
 
 
